@@ -112,6 +112,7 @@ pipeline {
     //     sh 'kubectl get svc'
     //   }
     // }
+    
   }
 }
  
