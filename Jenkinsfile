@@ -23,12 +23,12 @@ pipeline {
         publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '/var/lib/jenkins/workspace/Healthcare/target/surefire-reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
                           }
             }
-    //  stage('Create Docker Image') {
-    //   steps {
-    //     echo 'This stage will Create a Docker image'
-    //     sh 'docker build -t cbabu85/healthcare:1.0 .'
-    //                       }
-    //         }
+     stage('Create Docker Image') {
+      steps {
+        echo 'This stage will Create a Docker image'
+        sh 'docker build -t deeptideepali/Healthcare:1.0 .'
+                          }
+            }
     //  stage('Login to Dockerhub') {
     //   steps {
     //     echo 'This stage will loginto Dockerhub' 
